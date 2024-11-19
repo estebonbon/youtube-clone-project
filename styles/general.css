@@ -6,4 +6,15 @@ p{
 
 body{
   margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+
+  background-color: rgb(249, 249, 249);
+
+  /* height: 1500px; Remove this at the end */
+}
+
+.footer{
+  height: 200px; /* Makes space at the bottom */
 }

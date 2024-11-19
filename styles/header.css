@@ -1,8 +1,20 @@
 .header{
+  height: 55px;
+
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  height: 55px;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(240, 240, 240);
 }
 
                              /* LEFT HEADER SECTION */
@@ -63,9 +75,40 @@
   margin-right: 10px;
 }
 
+.search-button,
+.voice-search-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-button .tooltip,
+.voice-search-button .tooltip{
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: "Roboto", Arial;
+
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  pointer-events: none; /* Avoids triggering via tooltip hover */
+  white-space: nowrap; /* Avoids block the html element */
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip{
+  opacity: 1;
+}
+
 .search-icon{
   height: 25px;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 
 .voice-search-button{
@@ -78,7 +121,7 @@
 
 .voice-search-icon{
   height: 24px;
-  margin-top: 4px;
+  /* margin-top: 4px; */
 }
 
                           /* RIGHT HEADER SECTION */
@@ -104,7 +147,66 @@
   height: 24px;
 }
 
+.notifications-container{
+  position: relative;
+}
+
+.notification-count{
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  color: white;
+  background-color: rgb(200, 0, 0);
+
+  font-family: "Roboto", Arial;
+  font-size: 11px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  border-radius: 10px;
+}
+
+
 .my-profile-icon{
   height: 32px;
   border-radius: 16px;
+}
+
+.upload-icon-container,
+.youtube-apps-container,
+.notif-container,
+.profile-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.upload-icon-container .tooltip,
+.youtube-apps-container .tooltip,
+.notif-container .tooltip,
+.profile-container .tooltip{
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-family: "Roboto", Arial;
+
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  pointer-events: none; /* Avoids triggering via tooltip hover */
+  white-space: nowrap; /* Avoids block the html element */
+}
+
+.upload-icon-container:hover .tooltip,
+.youtube-apps-container:hover .tooltip,
+.notif-container:hover .tooltip,
+.profile-container:hover .tooltip{
+  opacity: 1;
 }
