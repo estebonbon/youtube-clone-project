@@ -1,3 +1,13 @@
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box; /* the '*' is a universal selector */
+}
+
 p{
   font-family: "Roboto", Arial;
   margin-top: 0px;
@@ -16,5 +26,5 @@ body{
 }
 
 .footer{
-  height: 200px; /* Makes space at the bottom */
+  height: 100px; /* Makes space at the bottom */
 }

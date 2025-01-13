@@ -35,3 +35,19 @@
   font-family: "Roboto", Arial;
   font-size: 10px;
 }
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebarlink img {
+    height: 20px;
+    margin-bottom: 2px;
+  }
+
+  .sidebar-icon-name {
+    font-size: 8px;
+    text-align: center;
+  }
+}
